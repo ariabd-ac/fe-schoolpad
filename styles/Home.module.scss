@@ -1,0 +1,94 @@
+@import '../styles/mixins';
+
+.container {
+  padding-left: 80px;
+  padding-right: 80px;
+
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.hero{
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width:100%;
+}
+
+.class {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.advert {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  // background-color: blue;
+
+  @include tablet(){
+    
+    flex-direction: column;
+  }
+
+  .yt {
+    flex:1;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .singleServices {
+    flex:1;
+    padding-right: 10px;
+    padding-left: 10px;
+    // background-color: cyan;
+  }
+  iframe {
+    border-radius: 20px;
+  }
+}
+
+.testimonial{
+  margin-bottom: 75px;
+
+  
+}
+
+.myServices {
+  padding: 0 10px 0 10px;
+
+  .reason {
+
+    h4{
+      margin: 0 11px 32px 0;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      color: #000;
+    }
+  }
+
+  .servicesIcon{
+    display: flex;
+    // background-color: aqua;
+    // align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include tablet(){
+    
+      align-items: flex-start;
+    }
+  }
+}
+
+

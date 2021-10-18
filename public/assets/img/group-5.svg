@@ -1,0 +1,42 @@
+<svg width="600" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M32 0h568v640H32c-17.673 0-32-14.327-32-32V32C0 14.327 14.327 0 32 0z" id="a"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#3FA9F5" xlink:href="#a"/>
+        <g fill-rule="nonzero" mask="url(#b)">
+            <path fill="#2672B5" d="M629.744 599.669H327.843V640h301.9z"/>
+            <path d="M382.884 555.868c-3.636 3.388-5.867 9.504-5.867 14.628 0 10.248 8.925 20.744 20 20.744h275.371a8.677 8.677 0 0 1-8.677 8.677H331.397c-8.926 0-16.942-3.305-22.81-8.76-5.868-5.372-9.422-12.893-9.422-21.157 0-16.529 14.463-29.835 32.232-29.835H663.71a8.677 8.677 0 0 1 8.677 8.678v1.57H397.017c-5.538.083-10.496 2.149-14.133 5.455z" fill="#FE5244"/>
+            <path d="M652.471 550.496v40h19.835v3.306H396.025c-3.058 0-6.033-.579-8.678-1.653-2.975-1.157-5.62-2.975-7.768-5.124a23.366 23.366 0 0 1-6.86-16.53c0-12.892 10.496-23.305 23.306-23.305h276.28v3.306h-19.834z" fill="#FE5244"/>
+            <path d="M660.157 550.496v40h-263.14c-11.075 0-20-8.926-20-20 0-5.537 2.23-10.496 5.867-14.132 3.637-3.637 8.595-5.868 14.133-5.868h263.14z" fill="#FFF"/>
+            <path d="M433.793 578.843v33.388h-23.057v-29.09c0-6.943-5.62-12.562-12.562-12.562h-10.248v-4.298h33.388c6.777 0 12.48 5.62 12.48 12.562z" fill="#FFCF2D"/>
+        </g>
+        <path d="m374.275 334.023-8.174 1.943c-.711.176-1.244-.353-1.067-1.06l1.955-8.125c0-.353.178-.53.533-.883l17.415-17.308c2.133-2.12 5.509-2.12 7.464 0 2.132 2.119 2.132 5.475 0 7.418l-17.415 17.308c0 .354-.356.53-.711.707z" fill="#FFF" fill-rule="nonzero" opacity=".801" mask="url(#b)"/>
+        <circle fill="#F9AE1B" mask="url(#b)" cx="600" cy="320" r="165"/>
+        <circle stroke="#FFF" mask="url(#b)" cx="594.5" cy="349.5" r="194.5"/>
+        <text mask="url(#b)" transform="rotate(24 408 389)" font-family="Montserrat-Bold, Montserrat" font-size="72" font-weight="bold" fill="#FFF">
+                    <tspan x="386.436" y="415">=</tspan>
+                </text>
+        <text opacity=".801" mask="url(#b)" font-family="Montserrat-Bold, Montserrat" font-size="72" font-weight="bold" fill="#FFF">
+                    <tspan x="204.436" y="555">+</tspan>
+                </text>
+        <text opacity=".801" mask="url(#b)" transform="rotate(6 312 400)" font-family="Montserrat-Bold, Montserrat" font-size="36" font-weight="bold" fill="#FFF">
+                    <tspan x="296.214" y="413">%</tspan>
+                </text>
+        <g opacity=".7" mask="url(#b)">
+            <text transform="rotate(6 -3014.522 929.461)" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold">
+                            <tspan x="2.308" y="81" fill="#FFF">A</tspan>
+                        </text>
+            <text transform="rotate(6 -2850.522 872.461)" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold">
+                            <tspan x="166.32" y="24" fill="#FFF">B</tspan>
+                        </text>
+            <text transform="rotate(6 -2847.022 985.461)" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold">
+                            <tspan x="170.204" y="137" fill="#FFF">C</tspan>
+                        </text>
+            <path stroke="#FFF" stroke-width="2" d="M248 435.985 101.558 392 248 351.448z"/>
+        </g>
+    </g>
+</svg>

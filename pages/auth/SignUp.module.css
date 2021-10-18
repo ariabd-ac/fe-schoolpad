@@ -1,0 +1,44 @@
+.container {
+  /* padding-left: 80px;
+  padding-right: 80px; */
+  height: 72px;
+  /* margin: 0 0 48px; */
+  /* padding: 16px 80px; */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  /* background-color: #fff; */
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+}
+
+.contentButton {
+  /* flex: 1; */
+  background-color: 'red';
+}
+
+.buttonMasuk {
+  margin-right: 24px;
+  width: 124px;
+  height: 40px;
+  /* margin: 0 24px 0 845px; */
+  /* padding: 9px 34px 8px; */
+  border-radius: 20px;
+  border: solid 1px #3fa9f5;
+  background-color: #fff;
+  color: #3fa9f5;
+}
+
+.buttonRegister {
+  width: 124px;
+  height: 40px;
+  /* margin: 0 0 0 24px; */
+  /* padding: 9px 35px 8px; */
+  border-radius: 20px;
+  background-color: #3fa9f5;
+}
+
+.buttonRegister:hover {
+  background-color: #fff;
+  color: #3fa9f5;
+}

@@ -1,0 +1,447 @@
+@import 'mixins';
+
+.content{
+  // height: 100vh;
+  // height: 100%;
+  // height: auto;
+  // min-height:100%;
+  // position:relative;
+  // padding-bottom:60px;
+}
+
+.header {
+  height: 72px;
+  z-index: 10;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-left: 80px;
+  padding-right: 80px;
+
+ 
+
+  .logo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include tablet(){
+      position: absolute;
+      
+      left: 0;
+      // background-color: red;
+    }
+    
+    
+
+
+    .wrapLogo {
+    // background-color: pink;
+
+    @include tablet(){
+      padding-left:20px;
+    }
+      .schoolpad {
+        height:32px;
+        width:162px;
+      }
+    }
+
+    
+
+    
+  }
+  
+
+  .barMenu{
+    border: solid 2px #3fa9f5;
+    // height: 20px;
+    display: flex;
+    // background-color: red;
+    opacity: 0;
+    @include tablet {
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-size: 2rem;
+    } 
+  }
+
+  .contentButton{
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .navMenu{
+    // background-color: red;
+
+    display: none;
+
+    @include tablet(){
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      top:70px;
+      left:0px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    li {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+  }
+
+
+}
+
+.buttonMasuk {
+  margin-right: 24px;
+  width: 124px;
+  height: 40px;
+  margin: 0 24px 0 0; 
+  padding: 9px 34px 8px; 
+  border-radius: 20px;
+  border: solid 1px #3fa9f5;
+  background-color: #fff;
+  color: #3fa9f5;
+}
+
+.buttonRegister {
+  width: 124px;
+  height: 40px;
+  margin: 0 0 0 24px;
+  padding: 9px 35px 8px; 
+  border-radius: 20px;
+  background-color: #3fa9f5;
+}
+
+.buttonRegister:hover {
+  background-color: #fff;
+  color: #3fa9f5;
+}
+
+
+
+.footer{
+  // width: 1440px;
+  height: 167px;
+  margin: 73px 0 0;
+  // padding: 32px 80px 20px;
+  background-color: #f9ae1b;
+  display: flex;
+  flex-direction: column;
+  // position:absolute;
+  // bottom:0;
+  // width:100%;
+
+  @include tablet(){
+    height: 100%;
+  }
+  
+}
+
+.footerHeader{
+  display: flex;
+  justify-content:space-between
+}
+
+.logo2{
+  display: flex;
+  flex: 1;
+  // background-color:grey;
+  img{
+    width: 229px;
+    height: 42px;
+
+    @include tablet(){
+      width: 100px;
+      height:20px;
+    }
+  }
+}
+
+.textHubungi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: blue;
+
+  @include tablet(){
+    justify-content: flex-end;
+    
+    
+    
+  }
+}
+
+.socialMedia{
+  display: flex;
+  // flex:1;
+  // background-color: yellow;
+  // margin-left: 600px;
+  justify-content:space-between;
+  align-items:center;
+  // background-color:red;
+  width:100px;
+
+  @include tablet(){
+    flex:1;
+    justify-content: flex-end;
+    width:100%;
+  }
+
+  img{
+    height:40px;
+    width:40%;
+
+    @include tablet(){
+      width: 30px;
+      height:30px;
+    }
+  }
+}
+
+.whatsapp{
+  margin-right: 20px;
+}
+
+.contactUs{
+  // background-color:pink;
+  display: flex;
+  flex:1;
+  justify-content:flex-end;
+  // align-items:center;
+
+  @include tablet(){
+    flex-direction: column;
+    // background-color:red;
+    justify-content:center;
+  }
+
+
+  h5{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    @include tablet(){
+      font-size: 15px;
+      margin-top: 0px;
+      margin-right: 0px;
+    }
+  
+  }
+  
+}
+
+.hr{
+  height: 1px;
+  margin: 34px 0 16px;
+  opacity: 0.5;
+  border: solid 2px #fff;
+}
+
+.copyRight{
+  display: flex;
+  justify-content:center;
+  margin-bottom: 20px;
+
+  @include tablet(){
+    margin-bottom: 20px;
+  }
+
+
+  h5{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+  }
+
+}
+
+
+// isLogin True =======================================================================
+
+
+
+.menuProfile {
+  
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+  @include tablet {
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    
+  } 
+
+  span {
+    margin: 0 8px 0 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000;
+  }
+
+  .iconMenu {
+    // background-color:pink;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    // border: 1px solid #3fa9f5;
+  }
+}
+
+.menuDropDown {
+  
+  width: 200px;
+
+  .subMenuDropDown {
+    
+    display: flex;
+    // background-color: red;
+    align-items: stretch;
+    
+
+    h6 {
+      padding-left: 6px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: right;
+      color: #000;
+      padding-bottom: 0;
+    }
+
+
+    span {
+      padding-left: 10px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: right;
+      color: #000;
+    }
+
+    .menuIconTop {
+      color: yellow;
+      font-size: 20px;
+    }
+    
+    .menuIcon {
+      color:#4E5155;
+      font-size: 16px;
+    }
+
+    .menuIconBot {
+      color:#D9534F;
+      font-size: 16px;
+    }
+  }
+}
+
+.contentButtonLogin {
+  // background-color: red;
+
+
+  .wraperButton {
+    // background-color: pink;
+    display: flex;
+
+    .buttonMasukLogin {
+      margin-right: 24px;
+      width: 124px;
+      height: 40px;
+      margin: 0 24px 0 0; 
+      // padding: 9px 34px 8px; 
+      border-radius: 20px;
+      border: solid 1px #3fa9f5;
+      background-color: #fff;
+      color: #3fa9f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: #3fa9f5;
+        color: #fff;
+      }
+
+      .buttonImg{
+        
+        img {
+          &:hover {
+            color : #fff;
+          }
+          
+        }
+
+        .btnIcon{
+          font-size: 22px;
+        }
+
+        .graduate {
+         &:hover {
+           background-color: #fff;
+           color: #fff;
+         } 
+        }
+      }
+      span {
+        margin-left: 3px;
+      }
+    }
+
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include landscapeTablet {
+    display: none;
+  }
+
+  @include ipad {
+    display: none;
+  }
+}

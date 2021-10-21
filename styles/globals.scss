@@ -31,3 +31,24 @@ a {
     width: 100%;
   }
 }
+
+.ant-tabs-ink-bar {
+  height: 5px;
+  background: #f9ae1b !important;
+}
+
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #000 !important; 
+  // color: #363636 !important; 
+  // font-weight: 500;
+}
+
+.ant-tabs-tab .ant-tabs-tab-btn:hover {
+  color: #8c8e90;
+}
+
+.ant-tabs-tab:hover{
+  color: #8c8e90;
+}
+

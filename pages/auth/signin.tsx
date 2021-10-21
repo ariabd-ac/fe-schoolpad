@@ -1,6 +1,6 @@
 import {
   Button, Form,
-  Input
+  Input, Checkbox
 } from 'antd';
 import 'antd/dist/antd.css';
 import Link from 'next/link';
@@ -66,9 +66,7 @@ const SignIn = () => {
                 hasFeedback>
                 <Input.Password className={styles.input} placeholder="Silakan buat kata sandi kamu" />
               </Form.Item>
-              <div className={styles.forgot}>
-                <Link href="signup"><h3>Lupa Password?</h3></Link>
-              </div>
+              <Checkbox style={{ marginBottom: 16 }}>Remember me</Checkbox>
               <Form.Item style={{ marginBottom: 32 }} >
                 <Button type="primary" htmlType="submit" className={styles.btnSubmit}>
                   Login
@@ -78,6 +76,9 @@ const SignIn = () => {
 
             <div className={styles.linkTo}>
               <h4>Belum punya akun? <Link href="/auth/signup">Daftar</Link></h4>
+              <div className={styles.forgot}>
+                <Link href="signup"><h3>Lupa Password?</h3></Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,162 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 62px 71px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+
+  @include tablet(){
+    padding: 32px 10px 50px 10px;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+    h6 {
+      margin: 0 0px 10px 0;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000;
+  
+      @include tablet(){
+        margin: 0 0px 19px 0;
+        padding-left: 10px;
+      }
+    }
+
+    span {
+      margin: 0 0px 10px 0;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000;
+      
+    }
+  }
+
+  
+  .filter {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    .wrapperDesc {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      span {
+        margin-left: 5px;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000;
+      }
+    }
+
+    @include tablet(){
+      padding-left: 10px;
+    }
+
+
+    .btnDropDown {
+      width: 240px;
+      height: 40px;
+      margin: 32px 166px 24px 0;
+      padding: 8px 8px 8px 16px;
+      border-radius: 6px;
+      border: solid 1px #f9ae1b;
+      background-color: transparent;
+      color: #f9ae1b;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      
+      margin: 3px 106px 2px 0;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0px;
+      color: #f9ae1b;
+    }
+  }
+  .btnWraper {
+    display: flex;
+
+    .btn {
+      margin-right: 10px;
+
+      .preview {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+
+        span {
+          margin-left:5px;
+          font-family: Montserrat;
+          color: #fff;
+          background-color: transparent;
+          font-size: 14px;
+          font-weight: normal;
+        }
+      }
+
+      .lihat {
+        font-family: Montserrat;
+        color: #fff;
+        
+        font-size: 14px;
+        font-weight: normal;
+
+        background-color: #02bc77;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 30vh;
+    // background-color: pink;
+
+    @include landscapeTablet() {
+      align-items:center;
+      justify-content: center;
+      
+
+    }
+  }
+
+  
+}

@@ -8,7 +8,7 @@
 }
 
 .pages {
-  // background-color: red;
+  // background-color: purple;
   margin-bottom: 30px;
   padding: 0 10px 0 10px;
   // padding-left: 10px;
@@ -31,13 +31,17 @@
     // background-color: purple;
   }
 
+  .card {
+   
+  }
+
 }
 
 
 
 .card{
   width: 100%;
-  // background-color: pink;
+  
   // margin: 24px 40px 32px 0;
   // padding: 10px 0 32px 0px;
   // padding-right: 30px;
@@ -111,15 +115,19 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem!important;
+  
 
   .soal {
     border: 1px solid grey;   
-    padding: 7px 14px 0;
+    padding: 5px 14px 0;
     margin-right: 16px;
     border-radius: 6px !important;
+    height: 30px;
+    
 
+  
     h6 {
-      // background-color: yellow;
+      
       font-family: Montserrat;
       font-size: 14px;
       font-weight: bold;
@@ -133,9 +141,10 @@
   
   .totalTime {
     border: 1px solid grey;   
-    padding: 7px 14px 0;
+    padding: 5px 14px 0;
     margin-right: 16px;
     border-radius: 6px !important;
+    height: 30px;
     
     h6 {
       font-family: Montserrat;
@@ -151,7 +160,7 @@
 }
 
 .time {
-  // background-color: yellow;
+  
   display: flex;
   margin-bottom: 2.75rem;
 
@@ -167,7 +176,9 @@
     margin-right: 16px;
     border-radius: 6px !important;
     display: flex;
-    // background-color:red;
+    
+    
+    max-height: 40px;
 
     &:hover {
       background-color: #f2f2f2;
@@ -186,10 +197,10 @@
       letter-spacing: 0px;
       font-family: Montserrat;
       font-size: 10px;
-      font-weight: bold;
+      font-weight: normal;
       font-stretch: normal;
       font-style: normal;
-      line-height: 1.5;
+      // line-height: 1.5;
       color: #000;
       
     }
@@ -201,6 +212,7 @@
     margin-right: 16px;
     border-radius: 6px !important;
     // background-color:pink;
+    max-height: 40px;
 
     display: flex;
     &:hover {
@@ -216,7 +228,7 @@
       letter-spacing: 0px;
       font-family: Montserrat;
       font-size: 10px;
-      font-weight: bold;
+      font-weight: normal;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.5;
@@ -297,6 +309,21 @@
       color: #f9ae1b;
     }
 
+    .btnIsDaftar {
+      width: 100%;
+      border-radius: 27.5px;
+      background-color:#8897aa!important;
+      border: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0px;
+      color: #fff;
+    }
+
     .btnDafatarTO{
       width: 100%;
       border-radius: 27.5px;
@@ -317,4 +344,303 @@
 .btnIkutLagi {
   width: 100%;
   border-radius:10px;
+}
+
+
+
+// ======================================================== CARD IS UJIAN =============================
+.pagesUjian {
+  // background-color: purple;
+  
+  margin-bottom: 30px;
+  padding: 0 10px 0 10px;
+  // padding-left: 10px;
+  // padding-right: 100px;
+  // border-right: 5px solid cyan;
+  // display: flex;
+  // justify-content:space-between;
+  // flex:1;
+  // flex:1;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // min-width:50%;
+  width: 50%;
+  @include tablet(){
+    min-width:100%;
+  }
+
+  h3 {
+    // background-color: purple;
+  }
+
+  .card {
+    background-color: #8897aa!important;
+  }
+
+}
+
+.descUjian {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem!important;
+  
+
+  .soalUjian {
+    border: 1px solid #fff;   
+    padding: 5px 14px 0;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    height: 30px;
+    
+
+  
+    h6 {
+      
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000;
+    }
+  }
+  
+  .totalTimeUjian {
+    border: 1px solid #fff;   
+    padding: 5px 14px 0;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    height: 30px;
+    
+    h6 {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000;
+    }
+  }
+}
+
+.timeUjian {
+  
+  display: flex;
+  margin-bottom: 2.75rem;
+
+  @include tablet(){
+    // flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .daftarUjian {
+    border: 1px solid #fff;   
+    padding: 5px 14px 0 10px;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    display: flex;
+    
+    max-height: 40px;
+
+    &:hover {
+      background-color: #f2f2f2;
+      
+    }
+
+    @include tablet(){
+     margin-bottom: 15px;
+    }
+    
+
+    span {
+      font-weight: bold;
+    }
+    h6 {
+      letter-spacing: 0px;
+      font-family: Montserrat;
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      // line-height: 1.5;
+      color: #000;
+      
+    }
+  }
+
+  .ujianUjian {
+    border: 1px solid #fff;   
+    padding: 5px 14px 0;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    // background-color:pink;
+    max-height: 40px;
+
+    display: flex;
+    &:hover {
+      background-color: #f2f2f2;
+      
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    h6 {
+      letter-spacing: 0px;
+      font-family: Montserrat;
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      color: #000;
+    }
+  }
+
+  
+}
+
+.previewUjian {
+  flex: 1;
+  margin-right: 10px;
+  .btnPreviewUjian {
+    // margin: 0px 10px 0 0;
+    // padding: 15px 122px 14px;
+    width: 100%;
+    border-radius: 27.5px;
+    border: solid 1px #f9ae1b;
+    background-color: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    color: #f9ae1b;
+
+    &:hover {
+      background-color: #f9ae1b;
+      color: #fff;
+    }
+
+  }
+}
+
+.dropdownUjian{
+  flex:1;
+
+  .btnDafatarTOUjian{
+    width: 100%;
+    border-radius: 27.5px;
+    // background-color: #35ce54;
+    border: none;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    color: #fff;
+  }
+}
+
+// Tryout (main_events) =============================================================================================================
+
+.timeTryOut {
+  
+  display: flex;
+  margin-bottom: 2.75rem;
+  
+  align-items: center;
+
+  @include tablet(){
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    align-items: center;
+    
+    
+  }
+
+  .daftarTryOut {
+    
+    padding: 7px 0px 0 10px;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    display: flex;
+    
+    
+    max-height: 40px;
+
+    &:hover {
+      background-color: #f2f2f2;
+      
+    }
+
+    @include tablet(){
+    //  margin-bottom: 15px;
+    padding: 7px 0px 0 5px;
+    }
+    
+
+    span {
+      font-weight: bold;
+    }
+    h6 {
+      font-family: Montserrat,sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0;
+      color: #000;
+      
+    }
+  }
+
+  
+
+  
+}
+
+
+// subMainEvenet (previw) =============================================================================
+
+.descPreview {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem!important;
+  
+
+  .soalPreview {
+    
+    padding: 5px 14px 0;
+    margin-right: 16px;
+    border-radius: 6px !important;
+    height: 30px;
+    
+
+  
+    h6 {
+      
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0px;
+      color: #000;
+    }
+  }
+  
 }

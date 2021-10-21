@@ -30,6 +30,10 @@ function CustomLayout(props: CustomLayoutProps) {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [isLogin, setLogin] = useState(true)
 
+  const logout = () => {
+    setLogin(false)
+  }
+
   const menu = (
     <Menu className={styles.menuDropDown}>
       <Menu.Item key="0">
@@ -53,7 +57,7 @@ function CustomLayout(props: CustomLayoutProps) {
         </div>
       </Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="4">
+      <Menu.Item key="4" onClick={logout}>
         <div className={styles.subMenuDropDown}>
           <LogoutIcon className={styles.menuIconBot} /> <span>Logout</span>
         </div>
@@ -93,30 +97,38 @@ function CustomLayout(props: CustomLayoutProps) {
               </div>
               <div className={styles.contentButtonLogin}>
                 <div className={styles.wraperButton}>
-                  <Button type="primary" className={styles.buttonMasukLogin}>
-                    <div className={styles.buttonImg}>
-                      <SchoolIcon />
-                    </div>
-                    <span>Schoolpad</span>
-                  </Button>
-                  <Button type="primary" className={styles.buttonMasukLogin}>
-                    <div className={styles.buttonImg}>
-                      <CollectionsBookmarkIcon />
-                    </div>
-                    <span>Try Out</span>
-                  </Button>
-                  <Button type="primary" className={styles.buttonMasukLogin}>
-                    <div className={styles.buttonImg}>
-                      <LibraryBooksOutlinedIcon />
-                    </div>
-                    <span>Produk</span>
-                  </Button>
-                  <Button type="primary" className={styles.buttonMasukLogin}>
-                    <div className={styles.buttonImg}>
-                      <BackupTableIcon className={styles.btnIcon} />
-                    </div>
-                    <span>Blog</span>
-                  </Button>
+                  <Link href="/schoolpad">
+                    <Button type="primary" className={styles.buttonMasukLogin}>
+                      <div className={styles.buttonImg}>
+                        <SchoolIcon />
+                      </div>
+                      <span>Schoolpad</span>
+                    </Button>
+                  </Link>
+                  <Link href="/main_events">
+                    <Button type="primary" className={styles.buttonMasukLogin}>
+                      <div className={styles.buttonImg}>
+                        <CollectionsBookmarkIcon />
+                      </div>
+                      <span>Try Out</span>
+                    </Button>
+                  </Link>
+                  <Link href="/packages">
+                    <Button type="primary" className={styles.buttonMasukLogin}>
+                      <div className={styles.buttonImg}>
+                        <LibraryBooksOutlinedIcon />
+                      </div>
+                      <span>Produk</span>
+                    </Button>
+                  </Link>
+                  <Link href="/blog">
+                    <Button type="primary" className={styles.buttonMasukLogin}>
+                      <div className={styles.buttonImg}>
+                        <BackupTableIcon className={styles.btnIcon} />
+                      </div>
+                      <span>Blog</span>
+                    </Button>
+                  </Link>
                   <Button type="primary" className={styles.buttonMasukLogin}>
                     <div className={styles.buttonImg}>
                       <TimelineIcon />

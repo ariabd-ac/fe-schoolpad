@@ -1,0 +1,243 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 62px 71px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+  
+  
+
+  @include tablet(){
+    padding: 32px 10px 50px 10px;
+  }
+
+  @include landscapeTablet() {
+    padding-left: 10px;  
+    padding-right: 0px;  
+    
+  }
+
+  h6 {
+    margin: 0 0px 20px 0;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+
+    @include tablet(){
+      margin: 0 0px 32px 0;
+      padding-left: 10px;
+    }
+
+  }
+  .filter {
+    
+    display: flex;
+    margin-bottom: 20px;
+    
+    align-items: center;
+
+    @include tablet(){
+      padding-left: 0px;
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+      
+    }
+
+    .ujian {
+      
+      align-items: center;
+      display: flex;
+      margin-right: 20px;
+      
+
+
+      span {
+        margin-left: 5px
+      }
+    }
+
+    .daftar {
+      align-items: center;
+      display: flex;
+      margin-right: 20px;
+
+
+      span {
+        margin-left: 5px
+      }
+    }
+
+    .peserta {
+      align-items: center;
+      display: flex;
+      margin-right: 20px;
+      
+
+
+      span {
+        margin-left: 5px
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // min-height: 100vh;
+
+    .btnDafatarTO{
+      width: 100%;
+      border-radius: 27.5px;
+      background-color: #35ce54;
+      border: none;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0px;
+      color: #fff;
+    }
+
+    
+    .belumDimulai {
+      width: 100%;
+      height: 53px;
+      background-color: #8897aa!important;
+      border-radius: 27.5px!important;
+      font-family: Montserrat,sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: center;
+      color: #fff;
+    }
+
+    .daftar {
+      width: 100%;
+      height: 53px;
+      background-color: #02BC77 !important;
+      border-radius: 27.5px!important;
+      font-family: Montserrat,sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: center;
+      color: #fff;
+    }
+    
+
+    @include landscapeTablet() {
+      align-items:center;
+      justify-content: center;
+      
+
+    }
+
+    .promotion {
+      
+      display:flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      span {
+        font-family: Montserrat;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: normal;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .socialMedia {
+        display: flex;
+        flex-direction: row;
+        
+
+        .facebook {
+          background-color: #3FA9F5;
+          font-family: Montserrat,sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.44;
+          letter-spacing: normal;
+          text-align: center;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+
+          span {
+            margin-left: 4px;
+          }
+        }
+
+        .instagram {
+          background-color: #d9534f;
+          font-family: Montserrat,sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.44;
+          letter-spacing: normal;
+          text-align: center;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          span {
+            margin-left: 4px;
+          }
+        }
+
+
+      }
+
+      
+      
+    }
+  }
+
+  
+}
+

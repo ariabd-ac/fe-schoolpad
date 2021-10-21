@@ -2,8 +2,17 @@ import { Button } from 'antd';
 import styles from '../styles/404.module.scss';
 import 'antd/dist/antd.css';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 const Custom404 = () => {
+
+  const router = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/')
+    }, 3000);
+  }, [])
   return (
     <div className={styles.container}>
       <div className={styles.customNotFound}>

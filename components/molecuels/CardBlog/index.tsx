@@ -1,6 +1,7 @@
 import CategoryBlog from '../../atoms/CategoryBlog'
 import styles from './CardBlog.module.scss'
 import { Button } from 'antd';
+import Link from 'next/link'
 
 const CardBlog = () => {
   return (
@@ -27,7 +28,9 @@ const CardBlog = () => {
         </div>
       </div>
       <div className={styles.button}>
-        <Button type="primary" className={styles.btnReadMore}>Read More</Button>
+        <Link href="/blog/4">
+          <Button type="primary" className={styles.btnReadMore}>Read More</Button>
+        </Link>
       </div>
     </div>
   )

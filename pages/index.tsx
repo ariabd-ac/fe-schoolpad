@@ -24,8 +24,12 @@ const Home = () => {
         <section className={styles.class}>
           <CardTO />
           <CardTO />
-          <CardTO />
-          <CardTO />
+          <CardTO ujian />
+          <CardTO ujian />
+          <CardTO ujian />
+          <CardTO ujian />
+          <CardTO ujian />
+          <CardTO ujian />
         </section>
         <section className={styles.advert}>
           <div className={styles.yt}>

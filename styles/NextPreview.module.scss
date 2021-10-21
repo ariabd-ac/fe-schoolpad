@@ -1,0 +1,146 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 62px 71px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+
+  @include tablet(){
+    padding: 32px 10px 50px 10px;
+  }
+
+  @include landscapeTablet() {
+    padding-left: 10px;  
+    padding-right: 0px;  
+    
+  }
+
+  .filter {
+    
+    display: flex;
+
+    @include tablet(){
+      padding-left: 0px;
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+      
+    }
+
+    
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // justify-content: center;
+    min-height: 100vh;
+
+    
+    
+
+    @include landscapeTablet() {
+      align-items:center;
+      justify-content: center;
+      
+
+    }
+    
+
+    .counters {
+      
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      .timer {
+        background-color: #D9534F;
+        padding: 8px 8px 8px 8px;
+        border-radius: 4px;
+
+        span {
+          font-family: Montserrat;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+
+      
+    }
+
+    .description {
+
+
+      .ujian {
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+
+        h3 {
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: bold;
+          
+        }
+
+        h4 {
+          margin-left: 10px;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .ket {
+      justify-content: center;
+      display: flex;
+      span {
+        margin-top: 2rem;
+        text-align:center;
+        font-family: Montserrat;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 2rem;
+      }
+    }
+
+
+    .footer {
+      
+
+      .btn {
+        width: 100%;
+        background-color: #02bc77;
+        border: none;
+        padding: 5px 24px 12px 24px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: normal;
+        
+      }
+
+    }
+  }
+
+  
+}
+

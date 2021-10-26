@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Layout } from 'antd';
 import styles from '../../../styles/Layout.module.scss'
 import Image from 'next/image'
@@ -16,6 +16,7 @@ import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import SchoolIcon from '@mui/icons-material/School';
 import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
 import TimelineIcon from '@mui/icons-material/Timeline';
+import { useRouter } from 'next/router';
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -29,6 +30,13 @@ function CustomLayout(props: CustomLayoutProps) {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [isLogin, setLogin] = useState(true)
+  const [isPrem, setIsPrem] = useState(true)
+
+  const route = useRouter();
+
+  useEffect(() => {
+    console.log("router", route);
+  }, [])
 
   const logout = () => {
     setLogin(false)
@@ -36,25 +44,35 @@ function CustomLayout(props: CustomLayoutProps) {
 
   const menu = (
     <Menu className={styles.menuDropDown}>
-      <Menu.Item key="0">
-        <div className={styles.subMenuDropDown}>
-          <ArrowUpwardIcon className={styles.menuIconTop} /> <h6>Upgrade Prime</h6>
-        </div>
-      </Menu.Item>
+      {
+        !isPrem &&
+        <Menu.Item key="0">
+          <div className={styles.subMenuDropDown}>
+            <ArrowUpwardIcon className={styles.menuIconTop} /> <h6>Upgrade Prime</h6>
+          </div>
+        </Menu.Item>
+      }
+
       <Menu.Item key="1">
-        <div className={styles.subMenuDropDown}>
-          <MenuBookIcon className={styles.menuIcon} /> <span>Test Diagnostik</span>
-        </div>
+        <Link href="/diagnostik">
+          <div className={styles.subMenuDropDown}>
+            <MenuBookIcon className={styles.menuIcon} /> <span>Test Diagnostik</span>
+          </div>
+        </Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <div className={styles.subMenuDropDown}>
-          <SettingsIcon className={styles.menuIcon} /> <span>Profile</span>
-        </div>
+        <Link href="/auth/edit">
+          <div className={styles.subMenuDropDown}>
+            <SettingsIcon className={styles.menuIcon} /> <span>Profile</span>
+          </div>
+        </Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <div className={styles.subMenuDropDown}>
-          <HistoryIcon className={styles.menuIcon} /> <span>History</span>
-        </div>
+        <Link href="#">
+          <div className={styles.subMenuDropDown}>
+            <HistoryIcon className={styles.menuIcon} /> <span>Riwayat Transaksi</span>
+          </div>
+        </Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="4" onClick={logout}>
@@ -129,22 +147,34 @@ function CustomLayout(props: CustomLayoutProps) {
                       <span>Blog</span>
                     </Button>
                   </Link>
-                  <Button type="primary" className={styles.buttonMasukLogin}>
-                    <div className={styles.buttonImg}>
-                      <TimelineIcon />
-                    </div>
-                    <span>Rapport</span>
-                  </Button>
+                  <Link href="/raports">
+                    <Button type="primary" className={styles.buttonMasukLogin}>
+                      <div className={styles.buttonImg}>
+                        <TimelineIcon />
+                      </div>
+                      <span>Rapport</span>
+                    </Button>
+                  </Link>
                 </div>
 
               </div>
               <div className={styles.menuProfile}>
-                <span>Hi, Dinda </span>
-                <div className={styles.iconMenu} onClick={e => e.preventDefault()}>
-                  <Dropdown overlay={menu} trigger={['click']}>
-                    <img src="/assets/img/arrowDown.svg" alt="arrowdown" />
-                  </Dropdown>
+                <div className={styles.nameAndIcon}>
+                  <span>Hi, Dinda </span>
+                  <div className={styles.iconMenu} onClick={e => e.preventDefault()}>
+                    <Dropdown overlay={menu} trigger={['click']}>
+                      <img src="/assets/img/arrowDown.svg" alt="arrowdown" />
+                    </Dropdown>
+                  </div>
                 </div>
+                {
+                  isPrem &&
+                  <div className={styles.iconPrem}>
+                    <img src="/assets/icon/vip-royal.svg" alt="prem" />
+                    <span>Prime</span>
+                  </div>
+                }
+
               </div>
             </>
             :
@@ -152,8 +182,7 @@ function CustomLayout(props: CustomLayoutProps) {
               <div className={styles.logo}>
                 <div className={styles.wrapLogo}>
                   <Link href="/">
-                    {/* <Image src="https://schoolpad.id/assets/logo_blue-5b76672c43cee4486d7c1319fbbe17f7c6853c9efdc4490c2b8561af79e74a99.svg" alt="logo" width={162} height={32}></Image> */}
-                    <img src="https://schoolpad.id/assets/logo_blue-5b76672c43cee4486d7c1319fbbe17f7c6853c9efdc4490c2b8561af79e74a99.svg" alt="logo" className={styles.schoolpad} />
+                    <img src="/assets/icon/logo_blue.svg" alt="logo" className={styles.schoolpad} />
                   </Link>
                 </div>
               </div>

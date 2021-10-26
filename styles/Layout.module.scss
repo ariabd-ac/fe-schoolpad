@@ -293,37 +293,91 @@
 .menuProfile {
   
   display: flex;
-  align-items: center;
-  justify-content:center;
-
-  @include tablet {
-    opacity: 1;
-    position: absolute;
-    top: 22px;
-    right: 20px;
-    
-  } 
-
-  span {
-    margin: 0 8px 0 0;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.44;
-    letter-spacing: normal;
-    text-align: right;
-    color: #000;
-  }
-
-  .iconMenu {
-    // background-color:pink;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content:center;
+  .nameAndIcon {
     display: flex;
-    align-items: center;
-    justify-content:center;
-    // border: 1px solid #3fa9f5;
+    justify-content: center;
+    span {
+      margin: 0 8px 0 0;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      text-align: right;
+      color: #000;
+    }
+    @include tablet {
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      
+    } 
+
+    .iconMenu {
+      
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      // border: 1px solid #3fa9f5;
+    }
   }
+
+  .iconPrem {
+    background-color: #f9ae1b;
+    height: 22px;
+    // width: 80px;
+    max-width: 80%;
+    border-radius: 12px;
+    display: flex;
+    @include tablet {
+      opacity: 1;
+      position: absolute;
+      top: 45px;
+      right: 23px;
+      max-width: 25%;
+      // width: 100%;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 10px;
+    } 
+
+    @include ipad {
+      // max-width: 13%;
+    }
+
+    img {
+      margin-left: 8px;
+    }
+
+    span {
+      height:auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  
+
+ 
+
+  
+
+  
+
+  
 }
 
 .menuDropDown {

@@ -1,0 +1,202 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 40px 62px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+
+  @include tablet(){
+    // padding: 32px 10px 50px 10px;
+  }
+
+  @include landscapeTablet() {
+    padding-left: 10px;  
+    padding-right: 10px;  
+    
+  }
+
+
+  .content {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    width: 100%;
+    // background-color: greenyellow;
+
+    @include tablet(){
+      min-height: 70vh;
+    }
+
+    .history {
+      .head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        @include tablet(){
+          flex-direction: column;
+          // align-items: flex-end;
+        }
+
+        h3 {
+          font-size: 25px;
+          font-family: Montserrat;
+          font-weight: 500;
+          color: #4E5155;
+          
+        }
+
+        button {
+          background-color:#02bc77;
+          border: none;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          border-radius: 4px;
+          height:38px;
+
+          @include tablet(){
+            width: 50%;
+            align-self: flex-end;
+          }
+        }
+      }
+
+      .tableHistory {
+        overflow-x: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .goToPayment {
+          background-color: #02bc77;
+          height: 26px;
+          padding: 3px 11px 3px 11px;
+
+          color: #FFFFFF;
+          font-family: Montserrat;
+          font-size: 12px;
+          border-radius: 4px;
+        }
+
+        table, th, td {
+          border: 1px solid #EEEEEE;
+          border-collapse: collapse;
+          border-spacing: 0;
+          border-left: none;
+          border-right: none;
+          padding: 10px;
+          // width: 100%; 
+        }
+
+        
+        thead tr th {
+          background-color:#28C3D7;
+          // padding: 20px;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          color: #fff;
+        }
+
+        tbody tr td {
+          
+          // padding: 10px;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          color: #4E5155;
+        }
+
+        tr,td {
+          width: 10%;
+          padding: 10px;
+          text-align: center;
+        }
+
+        
+
+        
+      }
+    }
+
+    .codePrime {
+      .head {
+        h5 {
+          font-size: 25px;
+          font-weight: 500;
+          font-family: Montserrat;
+          color: #4E5155;
+        }
+      }
+
+      .tableCode {
+        overflow-x: auto;
+        margin-bottom: 1rem;
+
+        .goToPayment {
+          background-color: #02bc77;
+          height: 26px;
+          padding: 3px 11px 3px 11px;
+
+          color: #FFFFFF;
+          font-family: Montserrat;
+          font-size: 12px;
+          border-radius: 4px;
+        }
+
+        table, th, td {
+          border: 1px solid #EEEEEE;
+          border-collapse: collapse;
+          border-spacing: 0;
+          border-left: none;
+          border-right: none;
+          padding: 10px;
+          // width: 100%; 
+        }
+
+        
+        thead tr th {
+          background-color:#28C3D7;
+          // padding: 20px;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          color: #fff;
+        }
+
+        tbody tr td {
+          
+          // padding: 10px;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          color: #4E5155;
+        }
+
+        tr,td {
+          width: 10%;
+          padding: 10px;
+          text-align: center;
+        }
+
+        
+      }
+    }
+
+  }
+
+  
+}

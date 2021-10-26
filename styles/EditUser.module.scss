@@ -1,0 +1,414 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 62px 71px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+
+  @include tablet(){
+    padding: 32px 10px 50px 10px;
+  }
+
+  @include landscapeTablet() {
+    padding-left: 10px;  
+    padding-right: 10px;  
+    
+  }
+
+  .filter {
+    
+    display: flex;
+
+    @include tablet(){
+      padding-left: 0px;
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+      
+    }
+
+    
+
+    .tabBarStyle {
+      color: #8c8e90;
+      font-weight: 600;
+      font-family: Montserrat;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      font-size: 18px;
+      // background-color: pink;
+      width: 100%;
+
+
+      @include landscapeTablet() {
+        padding-left: 0px;  
+        padding-right: 0px;  
+        // background-color:red;
+      }
+
+      .content2 {
+        // background-color: red;
+        width: 100%;
+        min-height: 50vh;
+        
+
+
+
+        .tableContainer {
+
+          h4 {
+            font-family: Montserrat;
+            font-size: 25px;
+            font-weight: 500;
+            color: #4E5155;
+          }
+        
+          .chooseKampus {
+            display: flex;
+            // background-color: red;
+
+            .formName {
+              // background-color:pink;
+              display: flex;
+              
+              @include tablet(){
+              flex-direction: column;
+              }
+
+              .select1 {
+                // background-color:yellow;
+                flex: 1;
+                padding: 0px 12px 0px 12px;
+              }
+
+              .select2 {
+                // background-color: green;
+                flex:1;
+                padding: 0px 12px 0px 12px;
+              }
+            }
+           
+          }
+
+          .tableKeterangan {
+            
+            
+
+            .detailData {
+              span {
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 700;
+                color: #4E5155;
+                
+              }
+
+              .tableData {
+                overflow-x: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                table,th,td {
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  width: 100%;
+                  border: 1px solid #ddd;
+                }
+
+                thead tr th {
+                  background-color:#28C3D7;
+                  padding: 20px;
+                  font-family: Montserrat;
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #fff;
+                }
+
+                tbody tr td {
+                  
+                  padding: 10px;
+                  font-family: Montserrat;
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #4E5155;
+                }
+
+                tr,td {
+                  width: 50%;
+                }
+              }
+
+              .peminat {
+                overflow-x: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                table,th,td {
+                  border-collapse: collapse;
+                  border-spacing: 0;
+                  width: 100%;
+                  border: 1px solid #ddd;
+                }
+
+                thead tr th {
+                  background-color:#28C3D7;
+                  padding: 20px;
+                  font-family: Montserrat;
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #fff;
+                }
+
+                tbody tr td {
+                  
+                  padding: 10px;
+                  font-family: Montserrat;
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #4E5155;
+                }
+
+                tr,td {
+                  width: 50%;
+                }
+              }
+            }
+
+            
+          }
+        }
+        
+        .simpan {
+          height: 48px;
+          padding: 0px 83px 0px 83px;
+          border-radius: 24px;
+          background-color:#3fa9f5;
+          font-weight: 700;
+          font-family: Montserrat;
+          font-size: 18px;
+
+          @include tablet(){
+            width: 100%;
+          }
+        }
+
+       
+      }
+    }
+
+
+    .tabEvent {
+    // background-color: red;
+    // padding-top: 30px;
+    padding-left: 20px;  
+    padding-right: 20px;  
+
+    @include tablet(){
+      padding-left: 0px;  
+      padding-right: 0px;  
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+    }
+    
+    }
+    
+
+    .text {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+     
+
+      h4 {
+        font-family: Montserrat;
+        font-size: 21px;
+        font-weight: 500;
+        line-height:23px;
+        color: #4E5155;
+      }
+
+      span {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: normal;
+        color: #4E5155;
+      }
+
+     
+    }
+
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    min-height: 100vh;
+    // background-color: red;
+    
+
+    @include landscapeTablet() {
+      align-items:center;
+      justify-content: center;
+      
+
+    }
+  }
+
+  
+}
+
+
+.formInput{
+  
+  flex: 1;
+  
+
+  @include tablet {
+    // display: none;
+    // width: auto;
+    // max-width: 50%;
+    // background-color: red;
+  }
+
+  .titleForm{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    h2{
+      // margin: 24px 77px 32px 77px;
+      margin-top: 10px;
+      // font-family: SFProText;
+      // font-size: 36px;
+      // font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      font-family: Montserrat;
+      font-size: 36px;
+      font-weight: 700;
+      color: #0b0b0b;
+      // text-align: center;
+      // color: #0b0b0b;
+
+      @include tablet {
+        font-size: 28px;
+      }
+    }
+  }
+
+
+  
+  
+}
+
+.formName{
+  // padding-right: 10px;
+  // padding-left: 10px;
+  width: 100%;
+  // background-color: pink;
+
+  @include tablet {
+    // display: none;
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+
+  .namaEmail {
+    
+    display: flex;
+    flex-direction: row;
+    @include tablet {
+      flex-direction: column;
+    }
+    .wrapeprInput {
+      // background-color:green;
+      width: 100%;
+      // flex:1;
+      .input {
+        width: 100%;
+      }
+    }
+    .wrapeprInput2 {
+      // background-color:red;
+      
+      width: 97%;
+      // flex:1;
+      margin-left:10px;
+      @include tablet {
+        width: 100%;
+        margin-left:0px;
+      }
+      .input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.input{
+  // height: 48px;
+  width: 50%;
+  // margin: 8px 0 0;
+  padding: 7px 14px 7px 14px;
+  border-radius: 6px;
+  border: solid 1px #9b9b9b;
+
+  color: #000;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.select {
+  border-radius: 6px;
+  
+}
+
+
+
+.btnSubmit {
+  background-color:#3fa9f5;
+  font-weight: 700;
+  font-family: Montserrat;
+  font-size: 18px;
+
+  padding: 0px 83px 0px 83px;
+  border-radius: 24px;
+  height:48px;
+}
+
+.btnUpgrade {
+  background-color: #02bc77;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: #04aa6d;
+  }
+
+  span {
+    color: #fff;
+    font-size: 14px;
+  }
+}

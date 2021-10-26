@@ -1,0 +1,24 @@
+.tableContainer {
+
+  h4 {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    color: #4E5155;
+  }
+
+  .chooseKampus {
+    display: flex;
+    background-color: red;
+
+
+    .select1 {
+      flex: 1;
+    }
+
+
+    .select2 {
+      flex: 1;
+    }
+  }
+}

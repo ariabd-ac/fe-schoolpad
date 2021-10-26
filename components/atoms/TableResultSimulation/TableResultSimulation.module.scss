@@ -1,0 +1,41 @@
+.page {
+  margin-top: 2rem;
+}
+.table {
+  // width: 100%;
+  // display: flex;
+  // justify-content: center;
+  overflow-x: auto;
+  table {
+    // border: 1px solid #8C8E90;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+ 
+  }
+  th {
+    border: 1px solid #8C8E90;
+    font-weight: 700!important;;
+    font-family: Montserrat;
+    font-size: 1rem;
+    padding: 10px 10px 10px 10px;
+  }
+  td {
+    border: 1px solid #8C8E90;
+    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 1rem;
+    padding: 10px 10px 10px 10px;
+  }
+  table, th, td {
+    color: #4e5155;
+    
+  }
+
+  .nan {
+    color: #d9534f;
+    font-weight: bold;
+  }
+}
+

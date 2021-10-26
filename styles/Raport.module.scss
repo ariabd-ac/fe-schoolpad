@@ -1,0 +1,300 @@
+@import '../styles/mixins';
+
+.pages {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+  
+
+  @include tablet(){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container {
+  margin-top: 24px;
+  padding: 32px 62px 71px 40px;
+  border-radius: 24px;
+  border: solid 1px #dcdcdc;
+  background-color: #fff;
+
+  @include tablet(){
+    padding: 32px 10px 50px 10px;
+  }
+
+  @include landscapeTablet() {
+    padding-left: 10px;  
+    padding-right: 0px;  
+    
+  }
+
+  h6 {
+    margin: 0 0px 32px 0;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+
+    @include tablet(){
+      margin: 0 0px 32px 0;
+      padding-left: 10px;
+    }
+
+  }
+  .filter {
+    
+    display: flex;
+
+    @include tablet(){
+      padding-left: 0px;
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+      
+    }
+
+    
+
+    .tabBarStyle {
+      color: #8c8e90;
+      font-weight: 600;
+      font-family: Montserrat;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      font-size: 18px;
+      // background-color: pink;
+      width: 100%;
+
+
+      @include landscapeTablet() {
+        padding-left: 0px;  
+        padding-right: 0px;  
+        // background-color:red;
+      }
+
+      .content2 {
+        // background-color: red;
+        width: 100%;
+        min-height: 50vh;
+        
+      }
+    }
+
+
+    .tabEvent {
+    // background-color: red;
+    padding-top: 30px;
+    padding-left: 20px;  
+    padding-right: 20px;  
+
+    @include tablet(){
+      padding-left: 0px;  
+      padding-right: 0px;  
+    }
+
+    @include landscapeTablet() {
+      padding-left: 0px;  
+      padding-right: 0px;  
+    }
+    
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // min-height: 100vh;
+    
+
+    @include landscapeTablet() {
+      align-items:center;
+      justify-content: center;
+      
+    }
+
+
+    .alert {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      @include tablet(){
+        flex-direction: column;
+      }
+    }
+
+    .btnSimulasi {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        background-color: #d9534f;
+        border: none;
+        border-radius: 27px;
+        height: 53px;
+        width: 200px;
+
+
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+
+    .contentCard {
+      width: 100%;
+
+      .contentCardAnt {
+        .top {
+          display: flex;
+          justify-content: space-between;
+  
+          .btnDropDown {
+            background-color: transparent;
+            border: 1px solid #35ce54;
+            color: #35ce54;
+            display: flex;
+            align-items: center;
+            
+          }
+        }
+
+        .chart {
+          width: 100%;
+          // background-color: pink;
+          margin-top: 1rem;
+          margin-left: -30px;
+          .chartData {
+            width: 100%;
+          }
+        }
+      }
+
+      .table {
+        margin-top: 1rem;
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+  }
+
+  
+}
+
+.cardRaport {
+ background-color: #3fa9f5; 
+ padding: 15px 24px 15px 24px;
+ display: flex;
+ flex-direction: column;
+ width: 30%;
+ border-radius: 5px;
+ @include tablet(){
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+ .time {
+
+
+  span {
+    color: #fff;
+
+  }
+
+  
+ }
+
+ .desc {
+    
+
+    span {
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+
+ 
+}
+.cardRaportSecondary {
+ background-color: #f9AE1b; 
+ padding: 15px 24px 15px 24px;
+ display: flex;
+ flex-direction: column;
+ width: 30%;
+ border-radius: 5px;
+ @include tablet(){
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+ .time {
+
+
+  span {
+    color: #fff;
+
+  }
+
+  
+ }
+
+ .desc {
+    
+
+    span {
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+
+ 
+}
+.cardRaportTernary {
+ background-color: #35ce54; 
+ padding: 15px 24px 15px 24px;
+ display: flex;
+ flex-direction: column;
+ width: 30%;
+ border-radius: 5px;
+ @include tablet(){
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+ .time {
+
+
+  span {
+    color: #fff;
+
+  }
+
+  
+ }
+
+ .desc {
+    
+
+    span {
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+
+ 
+}

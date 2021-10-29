@@ -68,7 +68,7 @@ function CustomLayout(props: CustomLayoutProps) {
         </Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link href="#">
+        <Link href="/orders">
           <div className={styles.subMenuDropDown}>
             <HistoryIcon className={styles.menuIcon} /> <span>Riwayat Transaksi</span>
           </div>
@@ -102,6 +102,7 @@ function CustomLayout(props: CustomLayoutProps) {
         />
       </Head>
       <Header className={styles.header}>
+
         {
           isLogin ?
             <>
@@ -211,7 +212,33 @@ function CustomLayout(props: CustomLayoutProps) {
         }
 
       </Header>
-      <Content className={styles.content}>{children}</Content>
+      <Content className={styles.content}>
+        <div className={styles.footerMenu}>
+          <div className={styles.containerMenuFooter}>
+            <div className={styles.wrapFooter}>
+              <SchoolIcon className={styles.iconMenuFooter} />
+              Schoolpad
+            </div>
+            <div className={styles.wrapFooter}>
+              <CollectionsBookmarkIcon className={styles.iconMenuFooter} />
+              Try Out
+            </div>
+            <div className={styles.wrapFooter}>
+              <LibraryBooksOutlinedIcon className={styles.iconMenuFooter} />
+              Porduk
+            </div>
+            <div className={styles.wrapFooter}>
+              <BackupTableIcon className={styles.iconMenuFooter} />
+              Blog
+            </div>
+            <div className={styles.wrapFooter}>
+              <TimelineIcon className={styles.iconMenuFooter} />
+              Rapport
+            </div>
+          </div>
+        </div>
+        {children}
+      </Content>
       <Footer className={styles.footer}>
         <div className={styles.footerHeader}>
           <div className={styles.logo2}>

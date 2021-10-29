@@ -1,20 +1,16 @@
-import 'antd/dist/antd.css';
-import Link from 'next/link';
-import CustomLayout from '../../components/molecuels/Layout';
-import { Breadcrumb, Dropdown, Button, Menu } from 'antd';
-import styles from '../../styles/MainEventsDetail.module.scss'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import CardBlog from '../../components/molecuels/CardBlog';
-import CategoryBlog from '../../components/atoms/CategoryBlog';
-import { Tabs } from 'antd';
-import CardTO from '../../components/molecuels/CardTO';
-
-import { useRouter } from 'next/router';
 import CalendarTodayTwoToneIcon from '@mui/icons-material/CalendarTodayTwoTone';
-import PersonIcon from '@mui/icons-material/Person';
-import { useState } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import PersonIcon from '@mui/icons-material/Person';
+import { Breadcrumb, Button } from 'antd';
+import 'antd/dist/antd.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import CardTO from '../../../components/molecuels/CardTO';
+import CustomLayout from '../../../components/molecuels/Layout';
+import styles from '../../../styles/MainEventsDetail.module.scss';
+
 
 
 

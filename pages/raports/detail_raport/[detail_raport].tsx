@@ -9,7 +9,10 @@ import CardHasilNilai from '../../../components/molecuels/CardHasilNilai';
 import CustomLayout from '../../../components/molecuels/Layout';
 import styles from '../../../styles/DetailRaport.module.scss';
 import { ColumnsType } from "antd/es/table";
+import { useState } from 'react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+const { SubMenu } = Menu;
 
 const data = [
   {
@@ -21,15 +24,20 @@ const data = [
     rank: 1,
     jumlah_peserta: 1000,
   },
+  {
+    name: 'Panda Khanif',
+    nilai: 305.02,
+    nilai_tertinggi: 336.75,
+    nilai_average: 500.52,
+    nilai_max: 552.0,
+    rank: 4,
+  },
 ];
 
 const dataRank = [
   {
     jumlahPeserta: 679,
-  },
-  {
-    jumlahPeserta: 679,
-  },
+  }
 ]
 
 const COLORS = ['#F9AE1B', '#3FA9F5', '#FFBB28', '#FF8042'];
@@ -52,55 +60,13 @@ interface User {
   rank: number;
   name: string;
   nilai: number;
+  age: number;
+  address: string;
+  tags: Array<string>;
 }
 
 
-const columns: ColumnsType<User> = [
-  {
-    key: "name",
-    title: "Name",
-    dataIndex: "name"
-  }
-];
 
-const dataTable: User[] = [
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-  {
-    key: 0,
-    rank: 1,
-    name: "Jack",
-    nilai: 2301.21,
-  },
-];
 
 const dataBar = [
   {
@@ -130,9 +96,55 @@ const dataBar = [
   },
 ];
 
+const menu = (
+  <Menu className={styles.menuUtama}>
+    <Menu.Item title="Belajar">
+      <span>UTBK 2022</span>
+    </Menu.Item>
+    <Menu.Item>
+      <span>TPS</span>
+    </Menu.Item>
+    <Menu.Item>
+      <span>TKA SAINTEK</span>
+    </Menu.Item>
+    <Menu.Item>
+      <span>TKA SOSHUM</span>
+    </Menu.Item>
+    <SubMenu title="Pelajaran" popupClassName={styles.subMenu2} style={{ color: '#3fa9f5', textAlign: 'left' }}>
+      <Menu.Item>
+        <span>Matematika</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Bahasa Indonesia</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Bahasa Inggris</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Fisika</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Kimia</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Biologi</span>
+      </Menu.Item>
+      <Menu.Item>
+        <span>Geografi</span>
+      </Menu.Item>
+    </SubMenu>
+    {/* <Menu.Item>
+      <Dropdown overlay={subMenu} placement="bottomRight" arrow>
+        <Button type="primary" className={styles.subMenu}>Ikut Lagi </Button>
+      </Dropdown>
+    </Menu.Item> */}
+  </Menu>
+);
+
 
 
 const DetailRaport = () => {
+  const [isUser, setValueRank] = useState(140)
 
   const { TabPane } = Tabs;
   const { Search } = Input;
@@ -142,6 +154,67 @@ const DetailRaport = () => {
   }
 
   const onSearch = (value: any) => console.log(value);
+
+  const columns = [
+    {
+      title: 'Rank TO',
+      dataIndex: 'rank',
+      key: 'rank',
+      className: 'column-raport-detail'
+    },
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      className: 'column-raport-detail'
+    },
+    {
+      title: 'Nilai',
+      dataIndex: 'nilai',
+      key: 'nilai',
+      className: 'column-raport-detail nilai-right'
+    },
+  ];
+
+  const dataTable = [
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+    {
+      key: 0,
+      rank: 1,
+      name: "Jack",
+      nilai: 2301.21,
+    },
+  ];
+
 
   return (
     <CustomLayout>
@@ -228,7 +301,7 @@ const DetailRaport = () => {
                   <h4>Statistik Ranking</h4>
                   <div className={styles.alertRanking}>
                     <div className={styles.containerPie}>
-                      <Card className={styles.chartPie} bodyStyle={{ display: 'flex', }}>
+                      <Card style={{ borderRadius: '20px' }} className={styles.chartPie} bodyStyle={{ display: 'flex', paddingLeft: 10, paddingRight: 10, }}>
                         <div className={styles.detailRank}>
                           <div className={styles.wrapperRank}>
                             <span>Nilai Kamu</span>
@@ -248,18 +321,16 @@ const DetailRaport = () => {
                           </div>
                         </div>
                         <div className={styles.chartPieWrapper}>
-                          <ResponsiveContainer width="100%" height="100%">
+                          <ResponsiveContainer width="99%" height="99%" className="pie-ondol">
                             {/* <BarChart layout="vertical" width={10} height={10} data={data} style={{ marginLeft: 0 }}>
                           <Bar dataKey="jumlah_peserta" fill="#8884d8" >
                           </Bar>
                         </BarChart> */}
-                            <PieChart style={{ backgroundColor: 'red' }} width={400} height={500}>
+                            <PieChart className="pie-fixed">
                               <Pie
                                 data={data}
-                                cx={120}
-                                cy="50%"
-                                innerRadius={50}
-                                outerRadius={100}
+                                innerRadius={35}
+                                outerRadius={80}
                                 dataKey="nilai"
                                 fill="#8884d8"
                               >
@@ -273,70 +344,53 @@ const DetailRaport = () => {
                       </Card>
                     </div>
                     <div className={styles.chartBar}>
-                      <Card className={styles.chartPie} bodyStyle={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between' }}>
+                      <Card style={{ borderRadius: '20px' }} className={styles.chartPie} bodyStyle={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between' }}>
                         <div className={styles.detailRank}>
                           <div className={styles.wrapperRank}>
                             <span>Nilai Rata-Rata</span>
-                            <span>200.52</span>
+                            <span className={styles.nilaiAverage}>200.52</span>
                           </div>
                           <div className={styles.wrapperRank}>
                             <span>Nilai Tertinggi</span>
-                            <span>636.76</span>
+                            <span className={styles.value}>636.76</span>
                           </div>
                         </div>
                         <div className={styles.chartPieWrapper}>
-                          <ResponsiveContainer width="99%" height={143}>
-                            <BarChart
-                              style={{ backgroundColor: 'red' }}
-                              layout="vertical"
-                              width={500}
-                              height={300}
-                              barCategoryGap={0}
-                              barSize={50}
-                              margin={{
-                                top: 0,
-                                right: 0,
-                                left: 0,
-                                bottom: 0,
-                              }}
-                              data={data}>
-                              <YAxis padding={{ top: 0, bottom: 0 }} hide={true} />
-                              <Tooltip />
-                              <Bar dataKey="jumlah_peserta" maxBarSize={100} background={{ fill: '#f9ae1b' }} fill="#f9ae1b" />
-                              {/* <Bar dataKey="rank" maxBarSize={100} stackId="a" background={{ fill: '#f9ae1b' }} fill="#f9ae1b" /> */}
-                            </BarChart>
-                          </ResponsiveContainer>
+                          <div className={styles.barRanked}>
+                            <div className={styles.wrapperTooltipJP}>
+                              <span className={styles.tooltipValue}>548</span>
+                            </div>
+                            <div className={styles.wrapperTooltipRank}>
+                              <span className={styles.tooltipValueRank}>1</span>
+                            </div>
+                          </div>
+                          <div className={styles.textRanked}>
+                            <span style={{ fontSize: 18, fontWeight: 700, color: '#4e5155' }}>548</span>
+                            <span style={{ fontSize: 18, fontWeight: 700, color: '#4e5155' }}>1</span>
+                          </div>
                         </div>
                       </Card>
                     </div>
                   </div>
                   <div className={styles.contentCard}>
-                    <BarChart
-                      style={{ backgroundColor: 'red' }}
-                      layout="vertical"
-                      width={1000}
-                      height={300}
-                      barCategoryGap={10}
-                      barSize={1}
-                      margin={{
-                        top: 60,
-                        right: 0,
-                        left: 0,
-                        bottom: 0,
-                      }}
-                      data={dataRank}>
-                      <XAxis dataKey="jumlahPeserta" scale="point" padding={{ left: 10, right: 10 }} />
-                      <YAxis padding={{ top: 10 }} />
-                      <Tooltip itemStyle={{ backgroundColor: '#f9ae1b' }} />
-                      <Legend />
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <Bar maxBarSize={1000} dataKey="jumlahPeserta" stackId="a" background={{ fill: '#a5a7a8' }} barSize={1000} fill="#8884d8" />
-                    </BarChart>
+                    <div className={styles.btnDropDown}>
+                      <div className={styles.rata2}>
+                        <Dropdown overlay={menu} trigger={['click']}>
+                          <Button type="primary" className={styles.btnRata2} onClick={e => e.preventDefault()}>Rata-rata <KeyboardArrowDownIcon fontSize='small' /></Button>
+                        </Dropdown>
+                      </div>
+                      <div className={styles.progStudi}>
+                        <Dropdown overlay={menu} trigger={['click']}>
+                          <Button type="primary" className={styles.btnRata2} onClick={e => e.preventDefault()}>Pilihan Program Studi<KeyboardArrowDownIcon fontSize='small' /></Button>
+                        </Dropdown>
+                      </div>
+                    </div>
                     <div className={styles.result}>
-                      <Table<User> dataSource={dataTable} className="table-striped-rows">
-                        <Table.Column<User> key="rank" title="Rank TO" dataIndex="rank" width={200} />
-                        <Table.Column<User> key="name" title="Name" dataIndex="name" />
-                        <Table.Column<User> key="nilai" title="Nilai" dataIndex="nilai" align="right" width={200} />
+                      <Table<User> columns={columns} dataSource={dataTable} className="table-striped-rows">
+                        {/* <Table.Column<User> key="rank" title="Rank TO" className="table-green" dataIndex="rank" width={200} />
+                        <Table.Column<User> key="name" title="Name" className="table-green" dataIndex="name" />
+                        <Table.Column<User> key="nilai" title="Nilai" className="table-green" dataIndex="nilai" align="right" width={200} /> */}
+
                       </Table>
                     </div>
                     {/* <div className={styles.btn}>

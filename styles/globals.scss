@@ -165,11 +165,16 @@ a {
 // hasil_to/[slug]
 .table-striped-rows tr:nth-child(2n) td {
     background-color: #fff;
+    // font-weight: normal;
+}
+
+.table-bold-raport {
     font-weight: normal;
 }
+
 .table-striped-rows tr:nth-child(2n+1) td {
     background-color: rgba(24,28,33,.025);
-    font-weight: normal;
+    // font-weight: normal;
 }
 
 // .table-striped-rows thead tr td {
@@ -179,4 +184,22 @@ a {
 .ant-table-thead > tr >th{
   // color: white;
   background: #fff !important;
+}
+
+.column-raport-detail {
+  font-weight: boldd;
+  background-color: rgba(24,28,33,.025);
+  font-family: Montserrat;
+}
+
+.nilai-right {
+  text-align: right;
+}
+
+
+.pie-fixed {
+  // width: 200px;
+  // height: 500px;
+  width: 100px;
+  height: 300px;
 }

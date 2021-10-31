@@ -275,9 +275,9 @@ const TryoutHasil = () => {
                   <div className={styles.contentCard}>
                     <div className={styles.result}>
                       <Table<User> dataSource={dataTable} className="table-striped-rows">
-                        <Table.Column<User> key="rank" title="Rank TO" dataIndex="rank" width={200} />
-                        <Table.Column<User> key="name" title="Name" dataIndex="name" />
-                        <Table.Column<User> key="nilai" title="Nilai" dataIndex="nilai" align="right" width={200} />
+                        <Table.Column<User> className="table-bold-raport" key="rank" title="Rank TO" dataIndex="rank" width={200} />
+                        <Table.Column<User> className="table-bold-raport" key="name" title="Name" dataIndex="name" />
+                        <Table.Column<User> className="table-bold-raport" key="nilai" title="Nilai" dataIndex="nilai" align="right" width={200} />
                       </Table>
                     </div>
                     {/* <div className={styles.btn}>

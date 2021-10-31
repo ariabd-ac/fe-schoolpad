@@ -99,10 +99,30 @@
         .alertRanking {
           display: flex;
           
+          @include tablet(){
+           flex-direction:column;
+          }
+
+          @include landscapeTablet() {
+            flex-direction:column;
+          }
+          
 
           .containerPie{
             flex:1;
-            background-color:pink;
+            // background-color:pink;
+            margin-right: 20px;
+            border-radius: 20px;
+
+            @include tablet() {
+              margin-bottom: 1rem;
+              margin-right: 0px;
+            }
+
+            @include landscapeTablet() {
+              margin-right: 0px;
+              margin-bottom: 1rem;
+            }
 
             .chartPie {
               .detailRank {
@@ -111,8 +131,8 @@
                 flex:1;
                 display: flex;
                 flex-direction: column;
-                background-color:yellow;
-                
+                // background-color:yellow;
+               
 
                 .wrapperRank {
                   display: flex;
@@ -123,19 +143,29 @@
                     font-family: Montserrat;
                     font-weight: 600;
                     color: #4e5155;
+
+                    @include tablet() {
+                      font-size: 16px;
+                    }
                   }
 
                   .nilaiKamu {
                     background-color: #3FA9F5;
-                    font-size: 32px;
+                    font-size: 24px;
                     font-family: Montserrat;
                     font-weight: 600;
-                    width: 141px;
+                    // width: 141px;
+                    width: 97px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     border-radius: 6px;
                     color: #fff;
+
+                    @include tablet() {
+                      // width: 60px;
+                      font-size: 16px;
+                    }
                   }
 
                   .nilaiMax {
@@ -149,38 +179,62 @@
                     justify-content: center;
                     border-radius: 6px;
                     color: #fff;
+
+                    @include tablet() {
+                      font-size: 16px;
+                    }
                   }
                 }
                 
               }
 
               .chartPieWrapper {
-                flex:1;
+                flex:2;
                 display: flex;
                 flex-direction: column;
+                
+
+
+               
               }
             }
           }
 
 
           .chartBar {
-            // flex:1;
+            border-radius: 20px;
             flex:1;
             // background-color:pink;
+            margin-left: 0px;
 
             .chartPie {
               display: flex;
               flex-direction: column;
 
               .detailRank {
-                background-color:yellow;
+                
                 flex:1;
-                margin-bottom: 2rem;
+                margin-bottom: 0.8rem;
   
                 .wrapperRank {
                   display: flex;
                   flex-direction: column;
                   margin-bottom: 1rem;
+
+                  @include tablet(){
+                    margin-bottom: 0px;
+                  }
+
+                  .nilaiAverage {
+                    color: #3FA9F5;
+                    font-size: 24px;
+                  }
+
+                  .value {
+                    color: #4e5155;
+                    font-size: 24px;
+                  }
+
                   span {
                     font-size: 18px;
                     font-family: Montserrat;
@@ -219,11 +273,145 @@
   
               }
               .chartPieWrapper {
-                flex:1;
+                // flex:1;
+                // margin-top: 0.6rem;
                 display: flex;
+                flex-direction: column;
                 justify-content: flex-end;
-                align-items: flex-end;
-                background-color: red;
+                // align-items: flex-end;
+                // background-color: red;
+                height: 20vh;
+
+                @include tablet(){
+                  margin-top: 0px;
+                }
+
+                .barRanked {
+                  height: 30px;
+                  width: 100%;
+                  background-color: #F9AE1B;
+                  margin-bottom: 1rem;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+
+                  display: flex;
+                  justify-content: space-between;
+
+
+                  .wrapperTooltipJP {
+                    // background-color:pink;
+                    flex:18;
+                    position: relative;
+                    display: inline-block;
+                    
+                    @include tablet(){
+                      flex:10;
+                    }
+
+                    @include ipad() {
+                      flex:17;
+                    }
+                  }
+
+                  
+
+                  .wrapperTooltipJP .tooltipValue {
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: #555;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 5px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 125%;
+                    left: 50%;
+                    margin-left: -60px;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                  }
+
+                  .wrapperTooltipJP .tooltipValue::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                  }
+
+                  .wrapperTooltipJP:hover .tooltipValue {
+                    visibility: visible;
+                    opacity: 1;
+                  }
+
+
+                  .wrapperTooltipRank {
+                    background-color:#fff;
+                    flex:1;
+                    border-radius: 50%;
+                    border: 1px solid #3FA9F5;
+                    transition: transform .2s; /* Animation */
+                    position: relative;
+                    display: inline-block;
+
+                    &:hover {
+                      transform: scale(1.3);
+                    }
+                  }
+
+                  .wrapperTooltipRank .tooltipValueRank {
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: #555;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 5px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 125%;
+                    left: 50%;
+                    margin-left: -60px;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                  }
+
+                  .wrapperTooltipRank .tooltipValueRank::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                  }
+
+                  .wrapperTooltipRank:hover .tooltipValueRank {
+                    visibility: visible;
+                    opacity: 1;
+                    
+                  }
+
+                  
+
+
+                }
+                
+                
+
+                .textRanked {
+                  display: flex;
+                  justify-content: space-between;
+
+                  font-weight: 600;
+                  font-size: 13px;
+                  color: #4e5155;
+                }
               }
             }
           }
@@ -315,15 +503,7 @@
         .top {
           display: flex;
           justify-content: space-between;
-  
-          .btnDropDown {
-            background-color: transparent;
-            border: 1px solid #35ce54;
-            color: #35ce54;
-            display: flex;
-            align-items: center;
-            
-          }
+         
         }
 
         .chart {
@@ -386,12 +566,95 @@
         
       }
 
-      
-
-    
+     
     }
   }
 
   
 }
 
+
+// .barRanked {
+//   height: 30px;
+//   width: 100%;
+//   background-color: #F9AE1B;
+//   margin-bottom: 1rem;
+
+
+//   position: relative;
+//   display: inline-block;
+// }
+
+// .barRanked .tooltipValue {
+//   visibility: hidden;
+//   width: 120px;
+//   background-color: #555;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 5px 0;
+//   position: absolute;
+//   z-index: 1;
+//   bottom: 125%;
+//   left: 50%;
+//   margin-left: -60px;
+//   opacity: 0;
+//   transition: opacity 0.3s;
+// }
+
+
+// .barRanked .tooltipValue::after {
+//   content: "";
+//   position: absolute;
+//   top: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-width: 5px;
+//   border-style: solid;
+//   border-color: #555 transparent transparent transparent;
+// }
+
+// .barRanked:hover .tooltipValue {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+.btnDropDown {
+  // background-color:red;
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .rata2 {
+   
+    .btnRata2 {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid #EAEAEAEA;
+      border-radius: 4px;
+      color:#000;
+      font-size: 12px;
+      font-weight: 600;
+
+    }
+  }
+
+  .progStudi {
+    margin-left: 1rem;
+    .btnRata2 {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid #EAEAEAEA;
+      border-radius: 4px;
+      color:#000;
+      font-size: 12px;
+      font-weight: 600;
+
+    }
+  }
+}

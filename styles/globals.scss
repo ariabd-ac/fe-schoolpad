@@ -203,3 +203,26 @@ a {
   width: 100px;
   height: 300px;
 }
+
+
+
+
+
+.react-tabs__tab {
+  color: #4E5155;
+  font-weight: 900;
+}
+
+.react-tabs__tab--selected {
+  // color: #4E5155;
+  color: #02bc77; 
+  font-weight: 900;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}

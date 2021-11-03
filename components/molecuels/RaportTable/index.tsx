@@ -1,9 +1,12 @@
 import { Table, Button } from 'antd';
+import Link from 'next/link';
 
 
 
 // In the fifth row, other columns are merged into first column
 // by setting it's colSpan to be 0
+
+
 
 const columns = [
   {
@@ -87,67 +90,7 @@ const columns = [
       },
     ]
   },
-  // {
-  //   title: 'Name',
-  //   dataIndex: 'name',
-  //   render: (text, row, index) => {
-  //     if (index < 4) {
-  //       return <a href="#">{text}</a>;
-  //     }
-  //     return {
-  //       children: <a href="#">{text}</a>,
-  //       props: {
-  //         colSpan: 5,
-  //       },
-  //     };
-  //   },
-  // },
-  // {
-  //   title: 'Home phone',
-  //   colSpan: 2,
-  //   dataIndex: 'tel',
-  //   render: (value, row, index) => {
-  //     const obj = {
-  //       children: value,
-  //       props: {},
-  //     };
 
-  //     if (index === 2) {
-  //       obj.props.rowSpan = 2;
-  //     }
-  //     // These two are merged into above cell
-  //     if (index === 3) {
-  //       obj.props.rowSpan = 0;
-  //     }
-  //     if (index === 4) {
-  //       obj.props.colSpan = 0;
-  //     }
-  //     return obj;
-  //   },
-  // },
-  // {
-  //   title: 'Home phone',
-  //   colSpan: 2,
-  //   dataIndex: 'tel',
-  //   render: (value, row, index) => {
-  //     const obj = {
-  //       children: value,
-  //       props: {},
-  //     };
-
-  //     if (index === 2) {
-  //       obj.props.rowSpan = 2;
-  //     }
-  //     // These two are merged into above cell
-  //     if (index === 3) {
-  //       obj.props.rowSpan = 0;
-  //     }
-  //     if (index === 4) {
-  //       obj.props.colSpan = 0;
-  //     }
-  //     return obj;
-  //   },
-  // }
 
 ];
 
@@ -167,51 +110,6 @@ const data = [
 ];
 
 
-const columns2 = [
-  {
-
-    title: '',
-    dataIndex: '',
-
-
-  },
-  {
-    title: 'Button Test',
-    key: 'key',
-    dataIndex: 'key',
-    render: (text: any, record: any) => (
-      // <button onClick={() => console.log(record)}>
-      //   {"Button Text"}
-      // </button>
-      <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
-    ),
-  },
-  {
-    title: 'Button Test',
-    key: 'key',
-    dataIndex: 'key',
-    render: (text: any, record: any) => (
-      <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
-    ),
-  },
-  {
-    title: 'Button Test',
-    key: 'key',
-    dataIndex: 'key',
-    render: (text: any, record: any) => (
-      <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
-    ),
-  },
-  {
-    title: 'Button Test',
-    key: 'key',
-    dataIndex: 'key',
-    render: (text: any, record: any) => (
-      <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
-    ),
-  },
-
-];
 
 const data2 = [
   {
@@ -222,8 +120,117 @@ const data2 = [
   }
 ];
 
+interface RaportProps {
+  type: string;
+}
 
-const RaportTable = () => {
+const RaportTable = ({ type }: RaportProps) => {
+
+
+
+  const columnsSaintek = [
+    {
+
+      title: '',
+      dataIndex: '',
+
+
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        // <button onClick={() => console.log(record)}>
+        //   {"Button Text"}
+        // </button>
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any, type: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}><Link href="/raports/detail_raport/saintek"> Detail</Link></Button>
+      ),
+    },
+
+  ];
+
+  const columns2 = [
+    {
+
+      title: '',
+      dataIndex: '',
+
+
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        // <button onClick={() => console.log(record)}>
+        //   {"Button Text"}
+        // </button>
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}>Detail</Button>
+      ),
+    },
+    {
+      title: 'Button Test',
+      key: 'key',
+      dataIndex: 'key',
+      render: (text: any, record: any, type: any) => (
+        <Button type="primary" style={{ backgroundColor: '#35ce54', border: 'none', borderRadius: 4 }}><Link href="/main_events/hasil_to/saintek"> Detail</Link></Button>
+      ),
+    },
+
+  ];
+
+  if (type === 'SOSHUM') {
+    return (
+      <>
+        <Table columns={columns} dataSource={data} bordered pagination={false} />
+        {/* <br /> */}
+        <Table columns={columnsSaintek} dataSource={data2} showHeader={false} pagination={false} />
+
+      </>
+    )
+  }
+
   return (
     <>
       <Table columns={columns} dataSource={data} bordered pagination={false} />

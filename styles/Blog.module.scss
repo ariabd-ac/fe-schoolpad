@@ -232,6 +232,7 @@
 
     .detailBlog {
       display: flex;
+      flex-direction: column;
      
       p {
         font-family: Montserrat;

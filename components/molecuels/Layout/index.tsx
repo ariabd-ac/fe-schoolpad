@@ -100,6 +100,10 @@ function CustomLayout(props: CustomLayoutProps) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <link
+          href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
+          rel="stylesheet"
+        />
       </Head>
       <Header className={styles.header}>
 

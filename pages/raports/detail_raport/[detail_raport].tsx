@@ -239,7 +239,7 @@ const DetailRaport = () => {
                   <div className={styles.contentCard}>
                     <div className={styles.contentCardAnt}>
                       <div className={styles.top}>
-                        <h6>TPS (Nilai: 405.02)</h6>
+                        <h6>Nilai (dalam %)</h6>
                       </div>
                       <div className={styles.chart}>
                         <ResponsiveContainer width="100%" height={250} >

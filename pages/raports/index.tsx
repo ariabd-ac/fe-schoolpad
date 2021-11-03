@@ -147,7 +147,7 @@ const Raports = () => {
                       </div>
                     </Card>
                     <div className={styles.table}>
-                      <RaportTable />
+                      <RaportTable type="" />
                     </div>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ const Raports = () => {
                       </div>
                     </Card>
                     <div className={styles.table}>
-                      <RaportTable />
+                      <RaportTable type="SOSHUM" />
                     </div>
                   </div>
                 </div>
